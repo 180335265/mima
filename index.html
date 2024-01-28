@@ -48,6 +48,17 @@
         .modal-content button:hover {
             background-color: #0056b3;
         }
+          /* 初始样式 */
+        .br-desktop {
+            display: block; /* 默认显示 */
+        }
+        
+        /* 在大于等于 768px 的屏幕上显示 */
+        @media only screen and (min-width: 768px) {
+            .br-desktop {
+                display: none; /* 隐藏 */
+            }
+	}
     </style>
 	   <script>
 	  //禁用F12 等
@@ -93,6 +104,8 @@
 	<div id="psdp-wrap">
 		<div class="psdp-cont">
 			<br/><br/><br/>
+                         <!-- 在小屏幕上显示的 <br> -->
+            <br class="br-desktop"/><br class="br-desktop"/><br class="br-desktop"/>
                               <span class="psdp-title">您访问的网站开启密码保护功能，请输入访问密码</span>
 				<div class="psdp-input">
 					<input class="psdp-btn" type="submit" id="chkBtn" value="确定" onclick="chkBtn()">
